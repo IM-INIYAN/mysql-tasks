@@ -14,8 +14,6 @@ insert into emp3(id,name,department,salary,city)values(
 (4,'ajay','HR',98000,'trichy'),
 (5,'rohit','finance',77000,'madurai');
 select * from emp3;
-select count(id)  from emp3 where department = 'HR';
-select count(id) from emp3 where department = 'IT';
-select count(id) from emp3 where department = 'finance';
+select count(id),department from emp3 group by department;
 select avg(salary),department from emp3 group by department;
 select max(salary) as maxSalary from emp3;
